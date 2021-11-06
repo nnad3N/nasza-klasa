@@ -96,7 +96,14 @@ const submitForm = (e) => {
 	} else {
 		console.log(formValues);
 		let formData = encode(formValues);
-		console.log(formData);
+
+		fetch('/', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			body: formData,
+		})
+			.then(() => console.log('Form successfully submitted'))
+			.catch((error) => alert(error));
 	}
 };
 
