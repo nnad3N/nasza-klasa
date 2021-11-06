@@ -69,8 +69,26 @@ textarea {
 		color: $error;
 		border-color: $error;
 	}
+}
 
-	button {
-		pointer-events: none;
+.success {
+	color: $accent;
+	border-color: $accent;
+
+	&:hover,
+	&:focus {
+		color: $accent;
+		border-color: $accent;
 	}
+}
+
+#form-status {
+	font-size: 3rem;
+	margin: 6rem auto;
+	border-bottom: 2px solid;
+}
+
+#form-button:disabled {
+	opacity: 0.4;
+	cursor: default;
 }

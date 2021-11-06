@@ -248,7 +248,24 @@ textarea {
   border-color: #ff002f;
 }
 
-.error button {
-  pointer-events: none;
+.success {
+  color: #00ff66;
+  border-color: #00ff66;
+}
+
+.success:hover, .success:focus {
+  color: #00ff66;
+  border-color: #00ff66;
+}
+
+#form-status {
+  font-size: 3rem;
+  margin: 6rem auto;
+  border-bottom: 2px solid;
+}
+
+#form-button:disabled {
+  opacity: 0.4;
+  cursor: default;
 }
 /*# sourceMappingURL=main.css.map */
