@@ -94,16 +94,25 @@ const submitForm = (e) => {
 	if (formError) {
 		console.log('formError');
 	} else {
-		console.log(formValues);
-		let formData = encode(formValues);
-
+		// let formData = encode(formValues);
+		// console.log(formData);
+		let myForm = document.getElementById('form');
+		let formData = new FormData(myForm);
 		fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: formData,
+			body: new URLSearchParams(formData).toString(),
 		})
 			.then(() => console.log('Form successfully submitted'))
 			.catch((error) => alert(error));
+
+		// fetch('/', {
+		// 	method: 'POST',
+		// 	headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+		// 	body: formData,
+		// })
+		// 	.then(() => console.log('Form successfully submitted'))
+		// 	.catch((error) => alert(error));
 	}
 };
 
