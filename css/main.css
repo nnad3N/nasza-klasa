@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #202020;
+  color: white;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 1500px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  html {
+    font-size: 45%;
+  }
+}
+
+main {
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+path,
+svg {
+  pointer-events: none;
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+p {
+  font-size: 2.2rem;
+  text-align: justify;
+}
+
+button {
+  cursor: pointer;
+  height: 6rem;
+  width: 20rem;
+  background-color: rgba(0, 0, 0, 0);
+  border: 4px white solid;
+  border-radius: 5rem;
+  display: block;
+  margin: 6rem auto 0 auto;
+  color: white;
+  font-size: 2.2rem;
+  -webkit-transition: border 0.2s ease-out;
+  transition: border 0.2s ease-out;
+}
+
+@media screen and (max-width: 1500px) {
+  button {
+    height: 6rem;
+    width: 16rem;
+  }
+  button img {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+  }
+}
+
+button:hover {
+  border-color: #00ff66;
+}
+
+input,
+textarea {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.line {
+  position: absolute;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 80%;
+  left: -8%;
+  width: 1px;
+  z-index: 5;
+  background-color: #00ff66;
+}
+
+@media screen and (max-width: 1050px) {
+  .line {
+    height: 1px;
+    width: 100%;
+    left: 0;
+    top: -5%;
+  }
+}
+
+.line-2 {
+  left: calc(35vw + 8%);
+}
+
+@media screen and (max-width: 1050px) {
+  .line-2 {
+    left: 0;
+  }
+}
+
+.white {
+  background-color: white;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 650px) {
+  .nav-open {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .burger-active {
+    position: fixed;
+    right: 3rem;
+  }
+  .burger-svg {
+    stroke: white;
+    -webkit-transition: stroke 0.5s ease-in-out;
+    transition: stroke 0.5s ease-in-out;
+  }
+  .burger-svg-active {
+    stroke: #00ff66;
+  }
+  .nav-open-main {
+    -webkit-transform: translateX(-60vw);
+            transform: translateX(-60vw);
+  }
+}
+
+form {
+  width: 50vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 6rem 10rem;
+}
+
+form h1 {
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1500px) {
+  form {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 1182px) {
+  form {
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  form {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  form {
+    width: 100%;
+    padding: 6rem 3rem;
+  }
+  form h1 {
+    margin: 2rem auto;
+  }
+}
+
+label {
+  margin: 2rem 0 0 0;
+  font-size: 3rem;
+}
+
+input,
+textarea {
+  padding: 1.5rem 0;
+  outline: none;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 2px white solid;
+  font-size: 2.2rem;
+  -webkit-transition: border-color 0.2s ease-out;
+  transition: border-color 0.2s ease-out;
+}
+
+input:hover, input:focus,
+textarea:hover,
+textarea:focus {
+  border-color: #00ff66;
+}
+
+textarea {
+  border-bottom: 3px white solid;
+  margin-top: 1.5rem;
+}
+
+.error {
+  color: #ff002f;
+  border-color: #ff002f;
+}
+
+.error:hover, .error:focus {
+  color: #ff002f;
+  border-color: #ff002f;
+}
+
+.error button {
+  pointer-events: none;
+}
+/*# sourceMappingURL=main.css.map */

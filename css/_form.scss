@@ -1,0 +1,76 @@
+form {
+	width: 50vw;
+	height: 100vh;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: $site-padding-top $site-padding;
+
+	h1 {
+		margin: 0 auto;
+	}
+
+	@include laptop {
+		height: fit-content;
+	}
+
+	@include sec3 {
+		width: 70vw;
+	}
+
+	@include tablet {
+		width: 80vw;
+	}
+
+	@include mobile {
+		width: 100%;
+		padding: $site-padding-top $site-padding-mob;
+
+		h1 {
+			margin: 2rem auto;
+		}
+	}
+}
+
+label {
+	margin: 2rem 0 0 0;
+	font-size: 3rem;
+}
+
+input,
+textarea {
+	padding: 1.5rem 0;
+	outline: none;
+	color: $color;
+	background-color: rgba($color: #000000, $alpha: 0);
+	border: none;
+	border-bottom: 2px white solid;
+	font-size: 2.2rem;
+	transition: border-color 0.2s ease-out;
+
+	&:hover,
+	&:focus {
+		border-color: $accent;
+	}
+}
+
+textarea {
+	border-bottom: 3px white solid;
+	margin-top: 1.5rem;
+}
+
+.error {
+	color: $error;
+	border-color: $error;
+
+	&:hover,
+	&:focus {
+		color: $error;
+		border-color: $error;
+	}
+
+	button {
+		pointer-events: none;
+	}
+}
