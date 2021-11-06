@@ -80,12 +80,6 @@ const handleFormInputs = () => {
 	}
 };
 
-const encode = (data) => {
-	return Object.keys(data)
-		.map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-		.join('&');
-};
-
 const submitForm = (e) => {
 	e.preventDefault();
 	validateFormValues();
@@ -94,22 +88,16 @@ const submitForm = (e) => {
 		console.log('formError');
 	} else {
 		const formValues = getFormValues();
-		console.log(new URLSearchParams(formValues).toString());
+
 		fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: new URLSearchParams(formValues).toString(),
+			body: `form-name=${form.getAttribute('name')}&${new URLSearchParams(
+				formValues
+			).toString()}`,
 		})
 			.then(() => console.log('Form successfully submitted'))
 			.catch((error) => alert(error));
-
-		// fetch('/', {
-		// 	method: 'POST',
-		// 	headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-		// 	body: formData,
-		// })
-		// 	.then(() => console.log('Form successfully submitted'))
-		// 	.catch((error) => alert(error));
 	}
 };
 
