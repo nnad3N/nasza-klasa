@@ -88,20 +88,17 @@ const encode = (data) => {
 
 const submitForm = (e) => {
 	e.preventDefault();
-	const formValues = getFormValues();
 	validateFormValues();
 
 	if (formError) {
 		console.log('formError');
 	} else {
-		// let formData = encode(formValues);
-		// console.log(formData);
-		let myForm = document.getElementById('form');
-		let formData = new FormData(myForm);
+		const formValues = getFormValues();
+		console.log(new URLSearchParams(formValues).toString());
 		fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: new URLSearchParams(formData).toString(),
+			body: new URLSearchParams(formValues).toString(),
 		})
 			.then(() => console.log('Form successfully submitted'))
 			.catch((error) => alert(error));
