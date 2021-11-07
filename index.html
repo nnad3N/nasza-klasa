@@ -1,28 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Form with validate.js</title>
+		<title>Nasza klasa</title>
 		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet" />
+		<link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
 	</head>
 	<body>
-		<form id="form" name="Formularz dziewczyn" method="POST" data-netlify="true">
-			<h1>The Placeholder</h1>
-			<span id="form-status"></span>
-			<label for="name">Name:</label>
-			<input required type="text" id="form-name" class="form-control" name="name" placeholder="Placeholder" />
-			<label for="surname">Surname:</label>
-			<input required type="text" id="form-surname" class="form-control" name="surname" placeholder="Placeholder" />
-			<label for="email">Email:</label>
-			<input required type="email" id="form-email" class="form-control" name="email" placeholder="Placeholder" />
-			<label for="message">Message:</label>
-			<textarea required name="message" id="form-message" class="form-control" cols="30" rows="10"></textarea>
-			<button id="form-button" type="submit">Send</button>
-		</form>
+		<nav>
+			<img id="logo" src="./img/logo.png" alt="logo naszej klasy" />
+			<ul class="nav">
+				<li><a href="#internship">Praktyki</a></li>
+				<li><a href="#elektronik">Elektronik.ru</a></li>
+				<li><a href="#lessons">Sekcja Zwłok</a></li>
+				<li><a href="#girls">Dziewczyny</a></li>
+				<li><a href="#gallery">Galeria</a></li>
+			</ul>
+			<div class="burger">
+				<svg class="burger-svg" xmlns="http://www.w3.org/2000/svg" width="39" height="21" viewBox="0 0 39 21">
+					<g transform="translate(-315.5 -29.5)">
+						<path d="M17.453,0H39" transform="translate(315.5 32.5)" fill="none" stroke-width="6" />
+						<line x2="39" transform="translate(315.5 47.5)" fill="none" stroke-width="6" />
+					</g>
+				</svg>
+			</div>
+		</nav>
 
+		<main>
+			<section class="hero">
+				<div class="hero-text">
+					<h1>Nasza klasa</h1>
+				</div>
+				<div class="hero-img-wrap">
+					<img class="img hero-img" src="./img/arcydzieo.jpg" alt="arcydzieło" />
+				</div>
+			</section>
+			<section id="internship" class="section section--column">
+				<div class="section-content">
+					<h1>Nasze praktyki zawodowe</h1>
+					<p>
+						Elektronik jest znany ze swojej współpracy z wieloma radomskimi firmami, które zapewniają jego uczniom dużo
+						miejsc na praktykach. Na szkolnych praktykach uczniowie zapoznają się z realiami pracy informatyka oraz uczą
+						się użytecznych rzeczy związanych z tym zawodem.
+					</p>
+				</div>
+				<span class="line"></span>
+				<div class="section-content section-list">
+					<p>Nie inaczej sytuacja przedstawia się w naszej klasie. Nasi koledzy z praktyk wynieśli takie rzeczy jak:</p>
+					<ul>
+						<li>Potrójną ładowarkę,</li>
+						<li>Kabel SATA,</li>
+						<li>Naderwany biceps od noszenia kartonów z ogniwami,</li>
+						<li>Torbę gruzu,</li>
+						<li>Umiejętność fachowej obsługi drukarki,</li>
+						<li>Sens życia.</li>
+					</ul>
+				</div>
+			</section>
+			<section id="elektronik" class="elektronik section">
+				<div class="section-content">
+					<h1>Elektronik.ru</h1>
+					<p>
+						Пожалуйста, помогите мне. Китайское правительство поместило мою семью в концентрационный лагерь и планирует
+						казнь на 15 ноября. Они говорят, что единственный способ спасти их - убедить по крайней мере 100
+						высокопоставленных инженеров поехать в Китай, чтобы помочь с китайскими программами наблюдения и социального
+						кредитования. Если вы можете мне помочь, пожалуйста, позвоните по телефону +86 153 8546 7199.
+					</p>
+				</div>
+				<div class="img-wrap">
+					<video controls class="img" src="./img/blyatman.mp4" alt="2" />
+				</div>
+			</section>
+			<section id="lessons" class="section section--column">
+				<div class="section-content section-list">
+					<h1>Lekcje przedmiotów zawodowych</h1>
+					<p>
+						Nauczyciele w elektroniku uchodzą za najlepszych na świecie, a same lekcje są uznawane za najciekawsze w tym
+						obszarze Drogi Mlecznej. Porywające zadania, w które ochoczo i z ekscytacją angażują się członkowie naszej
+						klasy można by wymieniać cały dzień. Należą do nich między innymi:
+					</p>
+					<ul>
+						<li>Instalowanie po raz piętnasty na tym samym przedmiocie systemu Windows na maszynie wirtualnej ,</li>
+						<li>Czytanie w ciszy przez 3 godziny dokumentacji kabli sieciowych,</li>
+						<li>Wpatrywanie się godzinami w niskiej klasy sprzęt techniki komputerowej,</li>
+						<li>Odszukiwanie zawartego w zadaniach od nauczyciela sensu polecenia,</li>
+						<li>Przeprowadzanie remontu pracowni,</li>
+						<li>Zgłębianie atlasu grzybów,</li>
+						<li>Dokonywanie inspekcji wyników na 22 stronie Google,</li>
+						<li>Zmienianie znaku delty mocą umysłu,</li>
+						<li>Doskonalenie gry w makao.</li>
+					</ul>
+				</div>
+			</section>
+			<div id="girls" class="form-wrapper">
+				<form id="form" name="Formularz dziewczyn" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+					<h1>Formularz aplikacyjny</h1>
+					<span id="form-status"></span>
+					<label for="name">Imię:</label>
+					<input required type="text" id="form-name" class="form-control" name="name" placeholder="Ania" />
+					<label for="surname">Nazwisko:</label>
+					<input required type="text" id="form-surname" class="form-control" name="surname" placeholder="Kowalska" />
+					<label for="email">Email:</label>
+					<input
+						required
+						type="email"
+						id="form-email"
+						class="form-control"
+						name="email"
+						placeholder="aniakowalska@elektronikonline.pl"
+					/>
+					<label for="message">Wiadomość:</label>
+					<textarea required name="message" id="form-message" class="form-control" cols="30" rows="10"></textarea>
+					<div data-netlify-recaptcha="true"></div>
+					<button id="form-button" type="submit">Send</button>
+				</form>
+			</div>
+			<section id="gallery" class="gallery">
+				<img class="img" src="./img/szkielet_biurko.jpg" alt="lekcje w elektroniku be like" />
+				<img class="img" src="./img/ładowarka.jpg" alt="ładowarka" />
+				<video controls class="img" src="./img/TRAKTOR.mp4" alt="traktor" />
+			</section>
+		</main>
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.3/purify.min.js"
 			integrity="sha512-gtcrasYnyeB27+IejClswFlb/eggt+khRr+lLAeNcgg5x2ijlWaiBOPXZkwivNj15LaE6s9CzV57hsoTPrQ5xg=="
@@ -35,6 +136,7 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		></script>
+		<script src="nav.js"></script>
 		<script src="app.js"></script>
 	</body>
 </html>

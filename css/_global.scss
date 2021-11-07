@@ -83,32 +83,15 @@ textarea {
 }
 
 .line {
-	position: absolute;
-	align-self: center;
-	height: 80%;
-	left: -8%;
-	width: 1px;
+	width: 100%;
+	height: 3px;
 	z-index: 5;
 	background-color: $accent;
+	margin: 2rem 0;
 
 	@include tablet {
-		height: 1px;
-		width: 100%;
-		left: 0;
-		top: -5%;
+		height: 2px;
 	}
-}
-
-.line-2 {
-	left: calc(35vw + 8%);
-
-	@include tablet {
-		left: 0;
-	}
-}
-
-.white {
-	background-color: white;
 }
 
 .img {
@@ -117,7 +100,7 @@ textarea {
 	object-fit: cover;
 }
 
-@include mobile {
+@include tablet {
 	.nav-open {
 		transform: translateX(0);
 	}
@@ -138,5 +121,9 @@ textarea {
 
 	.nav-open-main {
 		transform: translateX(-60vw);
+
+		@include mobile {
+			transform: translateX(-100vw);
+		}
 	}
 }

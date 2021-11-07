@@ -34,21 +34,19 @@ const sanitizeFormValues = () => {
 const validateFormValues = () => {
 	const { sanitizedName, sanitizedSurname, sanitizedEmail, sanitizedMessage } = sanitizeFormValues();
 
-	const name = validator.isEmpty(sanitizedName)
-		? handleError(formName, 'We just want to know your name')
-		: sanitizedName;
+	const name = validator.isEmpty(sanitizedName) ? handleError(formName, 'Chcemy znać twoje imię') : sanitizedName;
 
 	const surname = validator.isEmpty(sanitizedSurname)
-		? handleError(formSurname, 'And your surname will be handy')
+		? handleError(formSurname, 'Przydałoby się twoje nazwisko')
 		: sanitizedSurname;
 
 	const email =
 		validator.isEmpty(sanitizedEmail) || !validator.isEmail(sanitizedEmail)
-			? handleError(formEmail, 'But please enter a valid email so we can contact you')
+			? handleError(formEmail, 'Podaj prawidłowego maila')
 			: sanitizedEmail;
 
 	const message = validator.isEmpty(sanitizedMessage)
-		? handleError(formMessage, 'And give us some words about you')
+		? handleError(formMessage, 'Napisz nam coś o sobie')
 		: sanitizedMessage;
 
 	return {
@@ -92,7 +90,7 @@ const handleFormInputs = () => {
 };
 
 const handleSuccess = () => {
-	formStatus.innerHTML = 'Form has been successfully sent!';
+	formStatus.innerHTML = 'Formularz został wysłany!';
 	formStatus.classList.add('success');
 	formStatus.classList.add('active');
 	formButton.classList.add('success');
@@ -110,7 +108,7 @@ const submitForm = (e) => {
 
 	if (formError) {
 		console.error('Failed to send a request to the server');
-		formStatus.innerHTML = 'Please fix';
+		formStatus.innerHTML = 'Proszę poprawnie wypełnij formularz';
 	} else {
 		const formValues = getFormValues();
 

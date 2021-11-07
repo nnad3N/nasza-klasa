@@ -1,0 +1,39 @@
+.hero {
+	background-image: url('../img/background.jpg');
+	height: 90vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: $site-padding-top $site-padding;
+
+	@include tablet {
+		padding: $site-padding-top $site-padding-mob;
+	}
+
+	@include mobile {
+		height: fit-content;
+	}
+
+	&-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-self: center;
+		height: max-content;
+
+		h1 {
+			font-size: 6rem;
+			margin-bottom: 6rem;
+		}
+	}
+
+	&-img-wrap {
+		width: 80rem;
+		display: flex;
+		position: relative;
+
+		@include mobile {
+			width: 100%;
+		}
+	}
+}
