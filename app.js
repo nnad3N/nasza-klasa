@@ -65,6 +65,7 @@ const handleError = (place, err) => {
 	place.classList.add('error');
 	formButton.classList.add('error');
 	formStatus.classList.add('error');
+	formStatus.classList.add('active');
 	place.value = err;
 };
 
@@ -93,6 +94,7 @@ const handleFormInputs = () => {
 const handleSuccess = () => {
 	formStatus.innerHTML = 'Form has been successfully sent!';
 	formStatus.classList.add('success');
+	formStatus.classList.add('active');
 	formButton.classList.add('success');
 
 	formInputs.forEach((input) => {

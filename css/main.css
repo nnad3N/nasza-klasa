@@ -160,7 +160,6 @@ textarea {
 
 form {
   width: 50vw;
-  height: 100vh;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -177,14 +176,6 @@ form {
 
 form h1 {
   margin: 0 auto;
-}
-
-@media screen and (max-width: 1500px) {
-  form {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
 }
 
 @media screen and (max-width: 1182px) {
@@ -238,6 +229,17 @@ textarea {
   margin-top: 1.5rem;
 }
 
+#form-status {
+  font-size: 3rem;
+  margin: 4rem auto 0.5rem auto;
+  border-bottom: 2px solid;
+  display: none;
+}
+
+#form-status.active {
+  display: block;
+}
+
 .error {
   color: #ff002f;
   border-color: #ff002f;
@@ -248,6 +250,10 @@ textarea {
   border-color: #ff002f;
 }
 
+.error #form-status {
+  color: blue !important;
+}
+
 .success {
   color: #00ff66;
   border-color: #00ff66;
@@ -256,12 +262,6 @@ textarea {
 .success:hover, .success:focus {
   color: #00ff66;
   border-color: #00ff66;
-}
-
-#form-status {
-  font-size: 3rem;
-  margin: 6rem auto;
-  border-bottom: 2px solid;
 }
 
 #form-button:disabled {

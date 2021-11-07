@@ -1,6 +1,5 @@
 form {
 	width: 50vw;
-	height: 100vh;
 	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
@@ -9,10 +8,6 @@ form {
 
 	h1 {
 		margin: 0 auto;
-	}
-
-	@include laptop {
-		height: fit-content;
 	}
 
 	@include sec3 {
@@ -60,6 +55,17 @@ textarea {
 	margin-top: 1.5rem;
 }
 
+#form-status {
+	font-size: 3rem;
+	margin: 4rem auto 0.5rem auto;
+	border-bottom: 2px solid;
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
 .error {
 	color: $error;
 	border-color: $error;
@@ -68,6 +74,10 @@ textarea {
 	&:focus {
 		color: $error;
 		border-color: $error;
+	}
+
+	#form-status {
+		color: blue !important;
 	}
 }
 
@@ -80,12 +90,6 @@ textarea {
 		color: $accent;
 		border-color: $accent;
 	}
-}
-
-#form-status {
-	font-size: 3rem;
-	margin: 6rem auto;
-	border-bottom: 2px solid;
 }
 
 #form-button:disabled {
