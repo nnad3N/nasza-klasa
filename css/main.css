@@ -576,4 +576,26 @@ textarea {
   opacity: 0.4;
   cursor: default;
 }
+
+.form-hidden {
+  visibility: hidden;
+}
+
+footer {
+  min-height: 10vh;
+  padding: 2rem 10rem;
+  background-color: #202020;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 750px) {
+  footer {
+    padding: 2rem 5vw;
+  }
+}
 /*# sourceMappingURL=main.css.map */

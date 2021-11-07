@@ -11,7 +11,9 @@
 	</head>
 	<body>
 		<nav>
-			<img id="logo" src="./img/logo.png" alt="logo naszej klasy" />
+			<a href="/">
+				<img id="logo" src="./img/logo.png" alt="logo naszej klasy" />
+			</a>
 			<ul class="nav">
 				<li><a href="#internship">Praktyki</a></li>
 				<li><a href="#elektronik">Elektronik.ru</a></li>
@@ -56,7 +58,7 @@
 						<li>Naderwany biceps od noszenia kartonów z ogniwami,</li>
 						<li>Torbę gruzu,</li>
 						<li>Umiejętność fachowej obsługi drukarki,</li>
-						<li>Sens życia.</li>
+						<li><a href="https://dripcat.club">Sens życia.</a></li>
 					</ul>
 				</div>
 			</section>
@@ -96,7 +98,10 @@
 				</div>
 			</section>
 			<div id="girls" class="form-wrapper">
-				<form id="form" name="Formularz dziewczyn" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+				<form id="form" name="Formularz dziewczyn" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+					<p class="form-hidden">
+						<label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+					</p>
 					<h1>Formularz aplikacyjny</h1>
 					<span id="form-status"></span>
 					<label for="name">Imię:</label>
@@ -114,7 +119,7 @@
 					/>
 					<label for="message">Wiadomość:</label>
 					<textarea required name="message" id="form-message" class="form-control" cols="30" rows="10"></textarea>
-					<div data-netlify-recaptcha="true"></div>
+
 					<button id="form-button" type="submit">Send</button>
 				</form>
 			</div>
@@ -124,6 +129,14 @@
 				<video controls class="img" src="./img/TRAKTOR.mp4" alt="traktor" />
 			</section>
 		</main>
+		<footer>
+			<p>
+				Stronę wykonali: Dawid Mucha, Norbert Siczek, Damian Struk, Dominik Szymański, Bartłomiej Zawadzki<a
+					href="https://pl.wikipedia.org/wiki/Sekcja_Grotołazów_Wrocław"
+					>.</a
+				>
+			</p>
+		</footer>
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.3/purify.min.js"
 			integrity="sha512-gtcrasYnyeB27+IejClswFlb/eggt+khRr+lLAeNcgg5x2ijlWaiBOPXZkwivNj15LaE6s9CzV57hsoTPrQ5xg=="

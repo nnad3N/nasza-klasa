@@ -1,0 +1,11 @@
+footer {
+	min-height: 10vh;
+	padding: 2rem $site-padding;
+	background-color: $bg-color;
+	display: flex;
+	align-items: center;
+
+	@include mobile {
+		padding: 2rem $site-padding-mob;
+	}
+}
