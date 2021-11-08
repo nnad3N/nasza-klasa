@@ -6,8 +6,8 @@ const links = nav.querySelectorAll('a');
 
 burger.addEventListener('click', () => {
 	nav.classList.toggle('nav-open');
-	burger.classList.toggle('burger-active');
 	main.classList.toggle('nav-open-main');
+	burger.classList.toggle('burger-active');
 	burgerSvg.classList.toggle('burger-active');
 });
 

@@ -73,25 +73,27 @@ nav {
 	}
 }
 
-.burger {
-	display: none;
-	stroke: white;
-	transition: stroke 0.5s ease-in-out;
+@include tablet {
+	.burger {
+		display: none;
+		stroke: white;
+		transition: stroke 0.5s ease-in-out;
 
-	&.burger-active {
-		stroke: $accent;
+		&.burger-active {
+			stroke: $accent;
+		}
+
+		@include tablet {
+			display: block;
+			z-index: 5;
+		}
 	}
 
-	@include tablet {
-		display: block;
-		z-index: 5;
-	}
-}
+	.nav-open-main {
+		transform: translateX(-60vw);
 
-.nav-open-main {
-	transform: translateX(-60vw);
-
-	@include mobile {
-		transform: translateX(-100vw);
+		@include mobile {
+			transform: translateX(-100vw);
+		}
 	}
 }

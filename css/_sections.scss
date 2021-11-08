@@ -5,7 +5,6 @@
 	justify-content: space-between;
 
 	.img-wrap {
-		position: relative;
 		display: flex;
 		width: 35vw;
 
@@ -45,6 +44,22 @@
 	}
 }
 
+#internship {
+	background-color: $darker-color;
+
+	.img-wrap {
+		height: calc(100vh - 2 * #{$site-padding-top});
+	}
+
+	h1 {
+		text-align: left;
+
+		@include tablet {
+			text-align: center;
+		}
+	}
+}
+
 .section--column {
 	flex-direction: column;
 
@@ -76,14 +91,25 @@
 }
 
 .section--column,
-.gallery {
+.gallery-wrapper {
 	background-color: $darker-color;
+}
+
+.gallery-wrapper {
+	padding: $site-padding-top $site-padding;
+
+	h1 {
+		margin-bottom: 8rem;
+	}
+
+	@include mobile {
+		padding: $site-padding-top $site-padding-mob;
+	}
 }
 
 .gallery {
 	width: 100%;
 	min-height: 40vh;
-	padding: $site-padding-top $site-padding;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
 	column-gap: $site-padding;
