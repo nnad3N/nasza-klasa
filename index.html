@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<nav>
-			<a href="/">
+			<a href="#">
 				<img id="logo" src="./img/logo.png" alt="logo naszej klasy" />
 			</a>
 			<ul class="nav">
@@ -31,112 +31,116 @@
 			</div>
 		</nav>
 
-		<main>
-			<section class="hero">
-				<div class="hero-text">
-					<h1>Nasza klasa</h1>
-				</div>
-				<div class="hero-img-wrap">
-					<img class="img hero-img" src="./img/arcydzieo.jpg" alt="arcydzieło" />
-				</div>
-			</section>
-			<section id="internship" class="section section--column">
-				<div class="section-content">
-					<h1>Nasze praktyki zawodowe</h1>
-					<p>
-						Elektronik jest znany ze swojej współpracy z wieloma radomskimi firmami, które zapewniają jego uczniom dużo
-						miejsc na praktykach. Na szkolnych praktykach uczniowie zapoznają się z realiami pracy informatyka oraz uczą
-						się użytecznych rzeczy związanych z tym zawodem.
-					</p>
-				</div>
-				<span class="line"></span>
-				<div class="section-content section-list">
-					<p>Nie inaczej sytuacja przedstawia się w naszej klasie. Nasi koledzy z praktyk wynieśli takie rzeczy jak:</p>
-					<ul>
-						<li>Potrójną ładowarkę,</li>
-						<li>Kabel SATA,</li>
-						<li>Naderwany biceps od noszenia kartonów z ogniwami,</li>
-						<li>Torbę gruzu,</li>
-						<li>Umiejętność fachowej obsługi drukarki,</li>
-						<li><a href="https://dripcat.club">Sens życia.</a></li>
-					</ul>
-				</div>
-			</section>
-			<section id="elektronik" class="elektronik section">
-				<div class="section-content">
-					<h1>Elektronik.ru</h1>
-					<p>
-						Пожалуйста, помогите мне. Китайское правительство поместило мою семью в концентрационный лагерь и планирует
-						казнь на 15 ноября. Они говорят, что единственный способ спасти их - убедить по крайней мере 100
-						высокопоставленных инженеров поехать в Китай, чтобы помочь с китайскими программами наблюдения и социального
-						кредитования. Если вы можете мне помочь, пожалуйста, позвоните по телефону +86 153 8546 7199.
-					</p>
-				</div>
-				<div class="img-wrap">
-					<video controls class="img" src="./img/blyatman.mp4" alt="2" />
-				</div>
-			</section>
-			<section id="lessons" class="section section--column">
-				<div class="section-content section-list">
-					<h1>Lekcje przedmiotów zawodowych</h1>
-					<p>
-						Nauczyciele w elektroniku uchodzą za najlepszych na świecie, a same lekcje są uznawane za najciekawsze w tym
-						obszarze Drogi Mlecznej. Porywające zadania, w które ochoczo i z ekscytacją angażują się członkowie naszej
-						klasy można by wymieniać cały dzień. Należą do nich między innymi:
-					</p>
-					<ul>
-						<li>Instalowanie po raz piętnasty na tym samym przedmiocie systemu Windows na maszynie wirtualnej ,</li>
-						<li>Czytanie w ciszy przez 3 godziny dokumentacji kabli sieciowych,</li>
-						<li>Wpatrywanie się godzinami w niskiej klasy sprzęt techniki komputerowej,</li>
-						<li>Odszukiwanie zawartego w zadaniach od nauczyciela sensu polecenia,</li>
-						<li>Przeprowadzanie remontu pracowni,</li>
-						<li>Zgłębianie atlasu grzybów,</li>
-						<li>Dokonywanie inspekcji wyników na 22 stronie Google,</li>
-						<li>Zmienianie znaku delty mocą umysłu,</li>
-						<li>Doskonalenie gry w makao.</li>
-					</ul>
-				</div>
-			</section>
-			<div id="girls" class="form-wrapper">
-				<form id="form" name="Formularz dziewczyn" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-					<p class="form-hidden">
-						<label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-					</p>
-					<h1>Formularz aplikacyjny</h1>
-					<span id="form-status"></span>
-					<label for="name">Imię:</label>
-					<input required type="text" id="form-name" class="form-control" name="name" placeholder="Ania" />
-					<label for="surname">Nazwisko:</label>
-					<input required type="text" id="form-surname" class="form-control" name="surname" placeholder="Kowalska" />
-					<label for="email">Email:</label>
-					<input
-						required
-						type="email"
-						id="form-email"
-						class="form-control"
-						name="email"
-						placeholder="aniakowalska@elektronikonline.pl"
-					/>
-					<label for="message">Wiadomość:</label>
-					<textarea required name="message" id="form-message" class="form-control" cols="30" rows="10"></textarea>
+		<div id="main-wrapper">
+			<main>
+				<section class="hero">
+					<div class="hero-text">
+						<h1>Nasza klasa</h1>
+					</div>
+					<div class="hero-img-wrap">
+						<img class="img hero-img" src="./img/arcydzieo.jpg" alt="arcydzieło" />
+					</div>
+				</section>
+				<section id="internship" class="section section--column">
+					<div class="section-content">
+						<h1>Nasze praktyki zawodowe</h1>
+						<p>
+							Elektronik jest znany ze swojej współpracy z wieloma radomskimi firmami, które zapewniają jego uczniom
+							dużo miejsc na praktykach. Na szkolnych praktykach uczniowie zapoznają się z realiami pracy informatyka
+							oraz uczą się użytecznych rzeczy związanych z tym zawodem.
+						</p>
+					</div>
+					<span class="line"></span>
+					<div class="section-content section-list">
+						<p>
+							Nie inaczej sytuacja przedstawia się w naszej klasie. Nasi koledzy z praktyk wynieśli takie rzeczy jak:
+						</p>
+						<ul>
+							<li>Potrójną ładowarkę,</li>
+							<li>Kabel SATA,</li>
+							<li>Naderwany biceps od noszenia kartonów z ogniwami,</li>
+							<li>Torbę gruzu,</li>
+							<li>Umiejętność fachowej obsługi drukarki,</li>
+							<li><a href="https://dripcat.club">Sens życia.</a></li>
+						</ul>
+					</div>
+				</section>
+				<section id="elektronik" class="elektronik section">
+					<div class="section-content">
+						<h1>Elektronik.ru</h1>
+						<p>
+							Пожалуйста, помогите мне. Китайское правительство поместило мою семью в концентрационный лагерь и
+							планирует казнь на 15 ноября. Они говорят, что единственный способ спасти их - убедить по крайней мере 100
+							высокопоставленных инженеров поехать в Китай, чтобы помочь с китайскими программами наблюдения и
+							социального кредитования. Если вы можете мне помочь, пожалуйста, позвоните по телефону +86 153 8546 7199.
+						</p>
+					</div>
+					<div class="img-wrap">
+						<video controls class="img" src="./img/blyatman.mp4" alt="2" />
+					</div>
+				</section>
+				<section id="lessons" class="section section--column">
+					<div class="section-content section-list">
+						<h1>Lekcje w naszej szkole</h1>
+						<p>
+							Nauczyciele w elektroniku uchodzą za najlepszych na świecie, a same lekcje są uznawane za najciekawsze w
+							tym obszarze Drogi Mlecznej. Porywające zadania, w które ochoczo i z ekscytacją angażują się członkowie
+							naszej klasy można by wymieniać cały dzień. Należą do nich między innymi:
+						</p>
+						<ul>
+							<li>Instalowanie po raz piętnasty na tym samym przedmiocie systemu Windows na maszynie wirtualnej ,</li>
+							<li>Czytanie w ciszy przez 3 godziny dokumentacji kabli sieciowych,</li>
+							<li>Wpatrywanie się godzinami w niskiej klasy sprzęt techniki komputerowej,</li>
+							<li>Odszukiwanie zawartego w zadaniach od nauczyciela sensu polecenia,</li>
+							<li>Przeprowadzanie remontu pracowni,</li>
+							<li>Zgłębianie atlasu grzybów,</li>
+							<li>Dokonywanie inspekcji wyników na 22 stronie Google,</li>
+							<li>Zmienianie znaku delty mocą umysłu,</li>
+							<li>Doskonalenie gry w makao.</li>
+						</ul>
+					</div>
+				</section>
+				<div id="girls" class="form-wrapper">
+					<form id="form" name="Formularz dziewczyn" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+						<p class="form-hidden">
+							<label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+						</p>
+						<h1>Formularz aplikacyjny</h1>
+						<span id="form-status"></span>
+						<label for="name">Imię:</label>
+						<input required type="text" id="form-name" class="form-control" name="name" placeholder="Ania" />
+						<label for="surname">Nazwisko:</label>
+						<input required type="text" id="form-surname" class="form-control" name="surname" placeholder="Kowalska" />
+						<label for="email">Email:</label>
+						<input
+							required
+							type="email"
+							id="form-email"
+							class="form-control"
+							name="email"
+							placeholder="aniakowalska@elektronikonline.pl"
+						/>
+						<label for="message">Wiadomość:</label>
+						<textarea required name="message" id="form-message" class="form-control" cols="30" rows="10"></textarea>
 
-					<button id="form-button" type="submit">Send</button>
-				</form>
-			</div>
-			<section id="gallery" class="gallery">
-				<img class="img" src="./img/szkielet_biurko.jpg" alt="lekcje w elektroniku be like" />
-				<img class="img" src="./img/ładowarka.jpg" alt="ładowarka" />
-				<video controls class="img" src="./img/TRAKTOR.mp4" alt="traktor" />
-			</section>
-		</main>
-		<footer>
-			<p>
-				Stronę wykonali: Dawid Mucha, Norbert Siczek, Damian Struk, Dominik Szymański, Bartłomiej Zawadzki<a
-					href="https://pl.wikipedia.org/wiki/Sekcja_Grotołazów_Wrocław"
-					>.</a
-				>
-			</p>
-		</footer>
+						<button id="form-button" type="submit">Send</button>
+					</form>
+				</div>
+				<section id="gallery" class="gallery">
+					<img class="img" src="./img/szkielet_biurko.jpg" alt="lekcje w elektroniku be like" />
+					<img class="img" src="./img/ładowarka.jpg" alt="ładowarka" />
+					<video controls class="img" src="./img/TRAKTOR.mp4" alt="traktor" />
+				</section>
+			</main>
+			<footer>
+				<p>
+					Stronę wykonali: Dawid Mucha, Norbert Siczek, Damian Struk, Dominik Szymański, Bartłomiej Zawadzki<a
+						href="https://pl.wikipedia.org/wiki/Sekcja_Grotołazów_Wrocław"
+						>.</a
+					>
+				</p>
+			</footer>
+		</div>
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.3/purify.min.js"
 			integrity="sha512-gtcrasYnyeB27+IejClswFlb/eggt+khRr+lLAeNcgg5x2ijlWaiBOPXZkwivNj15LaE6s9CzV57hsoTPrQ5xg=="

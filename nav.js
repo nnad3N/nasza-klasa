@@ -1,14 +1,14 @@
 const nav = document.querySelector('.nav');
 const burger = document.querySelector('.burger');
 const burgerSvg = document.querySelector('.burger-svg');
-const main = document.querySelector('main');
+const main = document.querySelector('#main-wrapper');
 const links = nav.querySelectorAll('a');
 
 burger.addEventListener('click', () => {
 	nav.classList.toggle('nav-open');
 	burger.classList.toggle('burger-active');
 	main.classList.toggle('nav-open-main');
-	burgerSvg.classList.toggle('burger-svg-active');
+	burgerSvg.classList.toggle('burger-active');
 });
 
 links.forEach((link) => {

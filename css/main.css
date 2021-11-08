@@ -12,7 +12,7 @@ body {
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 10px;
   scroll-behavior: smooth;
 }
 
@@ -28,7 +28,7 @@ html {
   }
 }
 
-main {
+#main-wrapper {
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
@@ -51,6 +51,7 @@ svg {
 
 h1 {
   font-size: 4.8rem;
+  text-align: center;
 }
 
 p {
@@ -77,10 +78,6 @@ button {
   button {
     height: 6rem;
     width: 16rem;
-  }
-  button img {
-    -webkit-transform: scale(0.8);
-            transform: scale(0.8);
   }
 }
 
@@ -114,36 +111,6 @@ textarea {
      object-fit: cover;
 }
 
-@media screen and (max-width: 1050px) {
-  .nav-open {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  .burger-active {
-    position: fixed;
-    right: 5vw;
-  }
-  .burger-svg {
-    stroke: white;
-    -webkit-transition: stroke 0.5s ease-in-out;
-    transition: stroke 0.5s ease-in-out;
-  }
-  .burger-svg-active {
-    stroke: #00ff66;
-  }
-  .nav-open-main {
-    -webkit-transform: translateX(-60vw);
-            transform: translateX(-60vw);
-  }
-}
-
-@media screen and (max-width: 1050px) and (max-width: 750px) {
-  .nav-open-main {
-    -webkit-transform: translateX(-100vw);
-            transform: translateX(-100vw);
-  }
-}
-
 nav {
   min-height: 10vh;
   padding: 2rem 10rem;
@@ -162,11 +129,20 @@ nav {
   z-index: 10;
 }
 
-nav #logo {
+@media screen and (max-width: 1050px) {
+  nav {
+    padding: 2rem 5vw;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+}
+
+#logo {
   max-width: 6rem;
 }
 
-nav .nav {
+.nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,17 +153,17 @@ nav .nav {
   min-width: 30vw;
 }
 
-nav .nav li:not(:last-child) {
+.nav li:not(:last-child) {
   margin-right: 5rem;
 }
 
 @media screen and (max-width: 1050px) {
-  nav .nav li:not(:last-child) {
+  .nav li:not(:last-child) {
     margin: 0;
   }
 }
 
-nav .nav li:after {
+.nav li:after {
   content: '';
   display: block;
   border-bottom: 2px solid #00ff66;
@@ -196,34 +172,11 @@ nav .nav li:after {
   transition: width 0.2s ease-out;
 }
 
-nav .nav li:hover:after {
+.nav li:hover:after {
   width: 100%;
 }
 
 @media screen and (max-width: 1050px) {
-  nav .nav {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    padding: 2rem 5vw;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  nav .nav {
-    width: 100%;
-  }
-}
-
-.burger {
-  display: none;
-}
-
-@media screen and (max-width: 1050px) {
-  .burger {
-    display: block;
-    z-index: 5;
-  }
   .nav {
     position: fixed;
     top: 0;
@@ -247,6 +200,46 @@ nav .nav li:hover:after {
     transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
+  }
+  .nav.nav-open {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .nav {
+    width: 100%;
+  }
+}
+
+.burger {
+  display: none;
+  stroke: white;
+  -webkit-transition: stroke 0.5s ease-in-out;
+  transition: stroke 0.5s ease-in-out;
+}
+
+.burger.burger-active {
+  stroke: #00ff66;
+}
+
+@media screen and (max-width: 1050px) {
+  .burger {
+    display: block;
+    z-index: 5;
+  }
+}
+
+.nav-open-main {
+  -webkit-transform: translateX(-60vw);
+          transform: translateX(-60vw);
+}
+
+@media screen and (max-width: 750px) {
+  .nav-open-main {
+    -webkit-transform: translateX(-100vw);
+            transform: translateX(-100vw);
   }
 }
 
@@ -328,10 +321,6 @@ nav .nav li:hover:after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.section h1 {
-  text-align: center;
 }
 
 .section .img-wrap {
@@ -578,7 +567,7 @@ textarea {
 }
 
 .form-hidden {
-  visibility: hidden;
+  display: none;
 }
 
 footer {
