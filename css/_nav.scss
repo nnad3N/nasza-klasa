@@ -73,22 +73,22 @@ nav {
 	}
 }
 
-@include tablet {
-	.burger {
-		display: none;
-		stroke: white;
-		transition: stroke 0.5s ease-in-out;
+.burger {
+	display: none;
+	stroke: white;
+	transition: stroke 0.5s ease-in-out;
 
-		&.burger-active {
-			stroke: $accent;
-		}
-
-		@include tablet {
-			display: block;
-			z-index: 5;
-		}
+	&.burger-active {
+		stroke: $accent;
 	}
 
+	@include tablet {
+		display: block;
+		z-index: 5;
+	}
+}
+
+@include tablet {
 	.nav-open-main {
 		transform: translateX(-60vw);
 

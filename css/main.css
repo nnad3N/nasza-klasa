@@ -213,19 +213,18 @@ nav {
   }
 }
 
-@media screen and (max-width: 1050px) {
-  .burger {
-    display: none;
-    stroke: white;
-    -webkit-transition: stroke 0.5s ease-in-out;
-    transition: stroke 0.5s ease-in-out;
-  }
-  .burger.burger-active {
-    stroke: #00ff66;
-  }
+.burger {
+  display: none;
+  stroke: white;
+  -webkit-transition: stroke 0.5s ease-in-out;
+  transition: stroke 0.5s ease-in-out;
 }
 
-@media screen and (max-width: 1050px) and (max-width: 1050px) {
+.burger.burger-active {
+  stroke: #00ff66;
+}
+
+@media screen and (max-width: 1050px) {
   .burger {
     display: block;
     z-index: 5;
