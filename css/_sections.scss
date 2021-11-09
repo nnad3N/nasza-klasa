@@ -10,7 +10,7 @@
 
 		@include tablet {
 			width: 70rem;
-			margin-top: 2rem;
+			margin-top: 4rem;
 			order: 2;
 		}
 
@@ -32,6 +32,24 @@
 
 		@include mobile {
 			width: 100%;
+		}
+	}
+
+	.section-list {
+		display: flex;
+		flex-direction: column;
+
+		p {
+			margin: 4rem 0 2rem 0;
+		}
+
+		li {
+			font-size: 1.8rem;
+			margin-left: 2rem;
+
+			&:not(:last-child) {
+				margin-bottom: 1rem;
+			}
 		}
 	}
 
@@ -66,26 +84,8 @@
 	.section-content {
 		width: 70rem;
 
-		p {
-			margin: 4rem 0 2rem 0;
-		}
-
 		@include mobile {
 			width: 100%;
-		}
-	}
-}
-
-.section-list {
-	display: flex;
-	flex-direction: column;
-
-	li {
-		font-size: 1.8rem;
-		margin-left: 2rem;
-
-		&:not(:last-child) {
-			margin-bottom: 1rem;
 		}
 	}
 }
